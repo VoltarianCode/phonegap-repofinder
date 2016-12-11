@@ -12,8 +12,6 @@
     <link rel="stylesheet" type="text/css" href="css/app.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
 
     <title>Repofinder</title>
 </head>
@@ -29,7 +27,30 @@
             </header>
 
             <div data-role="content">
-                This is the content.
+
+                <form>
+                    <input type="text" id="search_input" data-type="search" placeholder="Search by Username">
+                    <button type="button" id="search_btn">Search</button>
+
+                </form>
+
+                <br/>
+
+                <div id="userinfo" >
+                </div>
+
+                <ul id="search_list" data-role="listview">
+                </ul>
+
+                <br />
+                <h3> Latest Repos</h3>
+                <form class="ui-filterable">
+                    <input type="text" data-type="search" id="filterBasic-input" placeholder="Filter Items ...">
+                </form>
+                <ul id="latest_repo_list" data-role="listview" data-filter="true" data-input="#filterBasic-input">
+                </ul>
+
+
             </div>
 
             <footer data-role="footer">
@@ -42,11 +63,10 @@
 
 
 
-
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/jquery.mobile.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
 
 
     
